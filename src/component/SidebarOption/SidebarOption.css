@@ -9,6 +9,10 @@
   color: #818181;
 }
 
+.sidebarOption > .sidebarOption__icon {
+  padding: 5px;
+}
+
 .sidebarOption > h3 {
   flex: 1;
   margin-left: 10px;
@@ -19,4 +23,23 @@
 .sidebarOption > p {
   display: none;
   font-weight: 300;
+}
+
+.sidebarOption:hover > p {
+  display: inline;
+}
+
+.sidebarOption:hover,
+.sidebarOption:hover > p,
+.sidebarOption:hover > h3,
+.sidebarOption--active,
+.sidebarOption--active > p,
+.sidebarOption--active > h3 {
+  background-color: #fcecec;
+  color: #c04b37;
+  font-weight: 800 !important;
+}
+
+.sidebarOption--active > p {
+  display: inline !important;
 }
