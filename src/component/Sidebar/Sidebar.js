@@ -13,10 +13,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import PersonIcon from "@mui/icons-material/Person";
 import DuoIcon from "@mui/icons-material/Duo";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { useGlobalContext } from "../context";
 
 function Sidebar() {
+  const { isSidebarOpen } = useGlobalContext();
   return (
-    <div className="sidebar">
+    <div
+      className={`sidebar-all
+      ${isSidebarOpen ? "sidebar show_sidebar " : "show_sidebar"}`}
+    >
       <Button startIcon={<AddIcon />} className="sidebar__compose">
         Compose
       </Button>

@@ -6,14 +6,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import AppsIcon from "@mui/icons-material/Apps";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import CloseIcon from "@mui/icons-material/Close";
+import { useGlobalContext } from "../context";
 
 function Header() {
+  const { openSidebar, closeSidebar } = useGlobalContext();
+
   return (
     <div className="header">
       <div className="header__left">
-        <IconButton>
+        <IconButton onClick={openSidebar}>
           <MenuIcon />
         </IconButton>
+
         <img
           src="https://www.vectorlogo.zone/logos/gmail/gmail-ar21.png"
           alt=""
