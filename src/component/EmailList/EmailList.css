@@ -23,3 +23,10 @@
   background-color: white;
   z-index: 999;
 }
+
+@media (max-width: 700px) {
+  .emailList {
+    position: absolute;
+    left: 0;
+  }
+}

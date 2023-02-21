@@ -16,7 +16,7 @@ function Header() {
     <div className="header">
       <div className="header__left">
         <IconButton onClick={openSidebar}>
-          <MenuIcon />
+          <MenuIcon className="header__menu" />
         </IconButton>
 
         <img

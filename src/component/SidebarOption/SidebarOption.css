@@ -43,3 +43,9 @@
 .sidebarOption--active > p {
   display: inline !important;
 }
+
+@media (max-width: 700px) {
+  .sidebarOption > p {
+    margin-left: 50px;
+  }
+}

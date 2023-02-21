@@ -31,4 +31,19 @@
   .sidebar {
     left: -100%;
   }
+
+  .sidebar__compose {
+    color: rgb(224, 61, 61) !important;
+    background-color: whitesmoke !important;
+    box-shadow: 0px 2px 5px -2px rgba(190, 11, 11, 0.75);
+    margin-left: 35px !important;
+  }
+  .sidebar-all {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    z-index: 9999999;
+    background-color: black;
+
+    padding-right: 40px;
+  }
 }
