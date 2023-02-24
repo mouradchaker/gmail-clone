@@ -14,15 +14,23 @@ import PersonIcon from "@mui/icons-material/Person";
 import DuoIcon from "@mui/icons-material/Duo";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { useGlobalContext } from "../context";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "../../features/mailSlice";
 
 function Sidebar() {
   const { isSidebarOpen } = useGlobalContext();
+  const dispatch = useDispatch();
+
   return (
     <div
       className={`sidebar-all
       ${isSidebarOpen ? "sidebar show_sidebar " : "show_sidebar"}`}
     >
-      <Button startIcon={<AddIcon />} className="sidebar__compose">
+      <Button
+        startIcon={<AddIcon />}
+        className="sidebar__compose"
+        onClick={() => dispatch(openSendMessage())}
+      >
         Compose
       </Button>
 
